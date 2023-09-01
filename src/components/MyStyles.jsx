@@ -8,6 +8,6 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  text-align: center;
+  text-align: left;
   font-size: 20px;
 `;
