@@ -15,7 +15,11 @@ const Form = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    if (contacts.some(({ name }) => name === contactName.toLowerCase())) {
+    if (
+      contacts.some(
+        ({ name }) => name.toLowerCase() === contactName.toLowerCase()
+      )
+    ) {
       Notiflix.Notify.warning(
         `Contact "${contactName}" is already in your contacts list`
       );
