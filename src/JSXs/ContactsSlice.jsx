@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   contacts: JSON.parse(localStorage.getItem('contacts')) || [],
-  filter: '', // Додайте фільтр до початкового стану
+  filter: '',
 };
 
 const contactsSlice = createSlice({
@@ -20,7 +20,7 @@ const contactsSlice = createSlice({
       localStorage.setItem('contacts', JSON.stringify(state.contacts));
     },
     setFilter: (state, action) => {
-      state.filter = action.payload; // Оновлення значення фільтру
+      state.filter = action.payload;
     },
   },
 });
